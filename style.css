@@ -1,0 +1,317 @@
+/* start global rules */
+*{
+    box-sizing: border-box;
+    /* background-color: #00ff660d;
+    outline: 1px dashed black; */
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-bg-color: #2640c8;
+    --main-dark:#3e3c3f;
+  }
+  .container{
+    padding: 0px 60px;
+    /* background-color: rgb(255, 0, 0); */
+}
+  @media only screen and (max-width: 900px){
+    .container{
+        padding: 0px 40px;
+        /* background-color: rgb(255, 0, 0); */
+    }
+}
+
+
+/* end global rules */
+/* start header */
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 50px;
+}
+    header .container button{
+        display: none;
+    }
+
+
+@media only screen and (max-width: 900px){
+    header .container button{
+        display: block;
+    }
+    header .container .main-nav button{
+        display: block;
+    }
+    header .container .main-nav  {
+       display: none;
+    }
+   
+}
+header .container .main-nav ul{
+    display: flex;
+    gap: 20px;
+}
+header .container ul li a {
+    text-decoration: none;
+    color: var(--main-dark);
+    font-weight: bold;
+}
+header .container ul li{
+    list-style: none;
+}
+header .container i{
+    font-size: 28px;
+    cursor: pointer;
+}
+header .container i:hover .main-nav{
+        display: block;
+}
+
+/* end header */
+/* start landing   */
+.landing-page .container{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    align-items: flex-end;
+    height: calc(70vh - 120px );
+}
+.landing-page .container .info{
+    align-self: center;
+}
+.landing-page .container h1{
+width: 400px;
+font-size: 38px;
+margin-bottom: 50px;
+}
+.landing-page .container p{
+    line-height: 1.6;
+    color: var(--main-dark);
+    width: 400px;
+    margin-bottom: 50px;
+}
+.landing-page .container a{
+    padding: 20px 70px;
+    background-color: var(--main-bg-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+@media only screen and (max-width: 900px){
+    .landing-page .container{
+       display: flex;
+       flex-direction: column;
+    }
+    .landing-page .container .info h1 {
+        width: 100%;
+    }
+    .landing-page .container p{
+        width: 100%;
+        margin-bottom: 45px;
+    }
+    .landing-page img{
+        max-width: 100%;
+    }
+}
+
+/* end landing  */
+/* start meet your match  */
+.section-one {
+    position: relative;
+    margin-top: 350px;
+}
+.section-one .container h1{
+    text-align: center;
+    color: var(--main-dark);
+}
+.section-one .cat-or-dog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: gray;
+}
+.section-one .cat-or-dog img{
+    width: 50px;
+}
+.section-one form{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+}
+.section-one input {
+    padding: 20px;
+    border-radius: 50px;
+    width: 350px;
+    border: none;
+    border: 1px solid var(--main-bg-color);
+}
+.section-one input[type="text"]{
+    padding-left: 40px;
+}
+.section-one input[type="submit"]{
+    margin-left: -150px;
+    width: 150px;
+    background-color: var(--main-bg-color);
+    color: white;
+    font-weight: bold;
+}
+.section-one i{
+position: relative;
+right: -30px;
+top: 15px;
+font-size: 25px;
+}
+.section-one .row{
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.section-one .row .col-4{
+    text-align: left;
+    background-color: white;
+    width: fit-content;
+}
+.section-one::before{
+    content: "";
+    position: absolute;
+    top: -80px;
+    height: 80%;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.057);
+    z-index: -1;
+    border-radius: 20px;
+}
+@media only screen and (max-width: 900px){
+    .section-one::before{
+        background-color: transparent;
+    }
+}
+/* end meet your match */
+/* start how it works */
+.section-two{
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+.section-two .container .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.section-two .col-4{
+    text-align: center;
+}
+.section-two .container img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.section-two h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-two .container p{
+    line-height: 1.5;
+    color: var(--main-dark);
+}
+@media only screen and (max-width: 900px){
+    .section-two .container .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+/* end how it works */
+/* start section three */
+.section-three {
+    background-color: #2640c8;
+    padding: 150px 0px;
+    text-align: center;
+
+}
+.section-three p{
+    color: white;
+    font-size: 38px;
+}
+.section-three button{
+    color: var(--main-bg-color);
+    background-color: white;
+    padding: 15px 60px;
+    border-radius: 50px;
+    border: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+#donate{
+    background-color: var(--main-bg-color);
+    color: white;
+    border: 1px solid white;
+}
+@media only screen and (max-width: 900px){
+    .section-one .row{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+}
+/* end section three */
+/* start footer */
+footer{  
+    margin-top: 100px;
+    height: 200px;
+}
+footer .container{
+    display: flex;
+    gap: 200px       ;
+}
+footer .footer-nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;                                               
+}       
+footer ul li a{
+    text-decoration: none;
+    color: var(--main-dark);
+    line-height: 1.6;
+
+}
+footer .container .copyrights p a{
+    text-decoration: none;
+    color: var(--main-dark);
+    
+}
+footer ul li {
+    list-style:none;
+ 
+}
+footer ul{
+    padding: 0;
+}
+@media only screen and (max-width: 900px){
+    footer .footer-nav{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;                                               
+    }  
+    footer .container{
+        display: flex;
+        gap: 80px;
+        flex-direction: column     ;
+    }
+    .container{
+        text-align: center;
+    }
+}
+/* end footer */
